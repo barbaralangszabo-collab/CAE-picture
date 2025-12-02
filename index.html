@@ -256,6 +256,7 @@
     </header>
 
     <div class="layout">
+
       <!-- LEFT SIDE -->
       <div class="panel">
         <label for="topicSelect">Topic</label>
@@ -281,6 +282,7 @@
 
       <!-- RIGHT SIDE -->
       <div class="panel">
+
         <div class="inline-timer">
           <span class="inline-timer-label">Speaking:</span>
           <span id="speakTimer" class="timer-display">01:00</span>
@@ -310,6 +312,7 @@
             <ul id="contextList"></ul>
           </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -377,7 +380,8 @@ const phraseBank = {
   ]
 };
 
-/* ============= Topics & Updated Image Filenames ============= */
+
+/* ============= TOPICS — WITH CORRECT IMAGE FILENAMES ============= */
 const topics = [
   {
     id: "hobbies",
@@ -386,9 +390,9 @@ const topics = [
     question1: "What benefits might these hobbies offer?",
     question2: "What challenges could they involve?",
     images: [
-      "images/entertainment2-min.png",
-      "images/entertainment3-min.png",
-      "images/enterteinment1-min.png"
+      "images/hobby1-min.png",
+      "images/hobbies2-min.png",
+      "images/hobbies3-min.png"
     ]
   },
   {
@@ -410,9 +414,9 @@ const topics = [
     question1: "How might these career choices shape personal identity?",
     question2: "What uncertainties might they bring?",
     images: [
-      "images/future2-min.png",
-      "images/future3-min.png",
-      "images/futute-innovation1-min.png"
+      "images/work1-min.png",
+      "images/work2-min.png",
+      "images/work3-min.png"
     ]
   },
   {
@@ -422,9 +426,9 @@ const topics = [
     question1: "How might these travel choices reflect personal values?",
     question2: "What inconveniences might they involve?",
     images: [
-      "images/city-country1-min.png",
-      "images/city-country2-min.png",
-      "images/city-country3-min.png"
+      "images/travel1-min.png",
+      "images/travel2-min.png",
+      "images/travel3-min.png"
     ]
   },
   {
@@ -434,9 +438,9 @@ const topics = [
     question1: "What personal achievements might these sports offer?",
     question2: "What setbacks could individuals face?",
     images: [
-      "images/entertainment2-min.png",
-      "images/entertainment3-min.png",
-      "images/enterteinment1-min.png"
+      "images/sports1-min.png",
+      "images/sport2-min.png",
+      "images/sport3-min.png"
     ]
   },
   {
@@ -446,9 +450,9 @@ const topics = [
     question1: "How might these shopping trends reflect societal changes?",
     question2: "What negative aspects could they have?",
     images: [
-      "images/food1-min.png",
-      "images/food2-min.png",
-      "images/food3-min.png"
+      "images/shopping1-min.png",
+      "images/shopping2-min.png",
+      "images/shopping3-min.png"
     ]
   },
   {
@@ -470,9 +474,9 @@ const topics = [
     question1: "How might these technologies influence our lives?",
     question2: "What disadvantages could they bring?",
     images: [
-      "images/future2-min.png",
-      "images/future3-min.png",
-      "images/futute-innovation1-min.png"
+      "images/tech1-min.png",
+      "images/tech2-min.png",
+      "images/tech3-min.png"
     ]
   },
   {
@@ -494,9 +498,9 @@ const topics = [
     question1: "How might these ways of communicating affect relationships?",
     question2: "What misunderstandings might arise?",
     images: [
-      "images/education1-min.png",
-      "images/education2-min.png",
-      "images/education3-min.png"
+      "images/relationships1-min.png",
+      "images/relationship2-min.png",
+      "images/relationship3-min.png"
     ]
   },
   {
@@ -530,9 +534,9 @@ const topics = [
     question1: "How might these forms of transport influence daily routines?",
     question2: "What environmental consequences could they have?",
     images: [
-      "images/city-country1-min.png",
-      "images/city-country3-min.png",
-      "images/city-country2-min.png"
+      "images/transport1-min.png",
+      "images/transport2-min.png",
+      "images/transport3-min.png"
     ]
   },
   {
@@ -575,7 +579,7 @@ const hesitationList = document.getElementById("hesitationList");
 const contextList = document.getElementById("contextList");
 const contextHelp = document.getElementById("contextHelp");
 
-/* ============= Helper Functions ============= */
+/* ============= Functions ============= */
 function buildExampleSentence(category, phrase, topicName) {
   const lowerTopic = topicName.toLowerCase();
 
@@ -656,7 +660,7 @@ function renderTopic() {
   contextHelp.style.display = "block";
 }
 
-/* ============= Timer Logic ============= */
+/* ============= Timer ============= */
 let speakTime = 60;
 let speakInterval = null;
 
